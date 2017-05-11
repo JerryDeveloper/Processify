@@ -1,0 +1,18 @@
+.category {
+  list-style-type: none;
+  clear: left;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden; }
+  .category li {
+    float: left;
+    border: 1px solid green;
+    margin: 4px; }
+    .category li a {
+      display: block;
+      width: 120px;
+      text-align: center;
+      text-decoration: none;
+      padding: 4px; }
+
+/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+</head>
+<body>
+
+<h1>Sign Up</h1>
+
+<form action="." method="POST">
+	{% csrf_token %}
+	{{ signup_form }}
+	<input type="submit" value="Sign Up" />
+</form>
+
+{% if error_msg %}
+	<p>{{ error_msg }}</p>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+body #tool-bar .tool-control {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  margin-left: 3px; }
+body #tool-bar #tool-e-control {
+  border: 1px solid blue; }
+body #tool-bar #tool-a-control {
+  border: 1px solid red; }
+body #top-bar #top-logo {
+  display: inline; }
+body #top-bar .cs-top-button {
+  width: 120px;
+  height: 60px;
+  border: 1px black solid;
+  position: absolute; }
+body #top-bar #top-button-save {
+  right: 380px; }
+body #top-bar #top-button-exit {
+  right: 130px; }
+body #top-bar #top-button-sne {
+  right: 255px; }
+body #top-bar #top-button-more {
+  right: 5px; }
+body #canvas {
+  position: absolute; }
+  body #canvas #form-e {
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999; }
+  body #canvas #form-a {
+    border: 1px solid black;
+    width: 400px;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999; }
+  body #canvas .cs-canvas-step {
+    width: 150px;
+    max-height: 400px;
+    min-height: 100px;
+    height: auto;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+    position: absolute;
+    /* Important: if relative the anchor and connector will depart from div */ }
+  body #canvas .cs-canvas-e-step {
+    border: 2px solid blue; }
+  body #canvas .cs-canvas-a-step {
+    border: 2px solid red; }
+  body #canvas #canvas-a-option {
+    border: 1px solid black;
+    background: white;
+    width: 120px;
+    padding: 5px;
+    position: absolute;
+    z-index: 99; }
+  body #canvas #form-a-description {
+    height: 100px; }
+
+/*# sourceMappingURL=canvas.css.map */

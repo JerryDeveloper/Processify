@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!--
+
+id/class naming convention: [id/cs-]component_name-[step_type-][customized]
+
+id/cs: if ignored, it's id by default
+
+component_name:
+tool - tool bar items
+top - top bar items
+form - detailed form
+display - items displayed on step block
+canvas - canvas item
+option - evaluation step option related
+
+step_type: e for execution, a for evaluation
+
+exception:
+
+dynamically generated step block use e/aXX as id, for easier track
+
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Process Canvas
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.4.min.css">
+		<link rel="stylesheet" type="text/css" href="canvas.css">
+	</head>
+
+	<body>
+		<!-- Top Bar -->
+		<div class="ui-layout-north" id="top-bar">
+			<h1 id="top-logo">Processify Canvas</h1>
+			<button class="cs-top-button" id="top-button-more">More</button>
+			<button class="cs-top-button" id="top-button-sne">Save and Exit</button>
+			<button class="cs-top-button" id="top-button-exit">Exit</button>
+			<button class="cs-top-button" id="top-button-save">Save</button>
+		</div>
+		
+		<!-- Tool Bar -->
+		<div class="ui-layout-west" id="tool-bar">
+			<div id="tool-e-control" class="tool-control"></div>
+			<div id="tool-a-control" class="tool-control"></div>
+		</div>
+		
+		<!-- Main Canvas -->
+		<div class="ui-layout-center center" id="canvas">
+			<table id="form-e" hidden>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>Editable</td>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<td><input type="text" id="form-e-name" /></td>
+					<td><input type="checkbox" /></td>
+				</tr>
+				<tr>
+					<th>Description</th>
+					<td><textarea id="form-e-description"></textarea></td>
+					<td><input type="checkbox" /></td>
+				</tr>
+				<tr>
+					<th>Start time</th>
+					<td>
+						<input type="text" id="form-e-startdatepicker" />
+						<input type="time" id="form-e-starttimepicker" />
+						<input type="checkbox" id="form-e-startIfFullDay" />full day
+					</td>
+					<td><input type="checkbox" /></td>
+				</tr>
+				<tr>
+					<th>End time</th>
+					<td>
+						<input type="text" id="form-e-endtimepicker" />
+						<input type="time" id="form-e-endtimepicker" />
+						<input type="checkbox" id="form-e-endIfFullDay" />full day
+					</td>
+					<td><input type="checkbox" /></td>
+				</tr>
+				<tr>
+					<th>Task owner</th>
+					<td>
+						<input type="text" id="form-e-taskowner" />
+					</td>
+					<td><input type="checkbox" checked /></td>
+				</tr>
+				<tr>
+					<th>Venue</th>
+					<td>
+						<input type="text" id="form-e-taskowner" />
+					</td>
+					<td><input type="checkbox" /></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td colspan="3">
+						<button id="form-e-save">OK</button>
+						<button id="form-e-delete">Delete</button>
+					</td>
+				</tr>
+				
+			</table>
+			
+			<table id="form-a" hidden>
+				<tr>
+					<th>Name</th>
+					<td><textarea id="form-a-name"></textarea></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<button id="form-a-save">OK</button>
+						<button id="form-a-delete">Delete</button>
+					</td>
+				</tr>
+			</table>
+			
+			<div id="canvas-a-option" hidden>
+				<input type="radio" name="a-option" value="yes" checked>Yes<br/>
+				<input type="radio" name="a-option" value="no" checked>No<br/>
+				<button id="canvas-a-option-ok">OK</button>
+				<button id="canvas-a-option-cancel">Cancel</button>
+			</div>
+			
+			<div id="step-e-template" class="cs-canvas-step cs-canvas-e-step" hidden>
+				<p class="cs-step-e-name">Please provide a display name for the step</p>
+			</div>
+			
+			<div id="step-a-template" class="cs-canvas-step cs-canvas-a-step" hidden>
+				<p class="cs-step-a-name">Please provide a display name for the step</p>
+			</div>
+			
+		</div>
+		
+		<!-- JS Libraries -->
+		<script src="lib/jquery-1.11.1.min.js"></script>
+		<script src="lib/jquery-migrate-1.2.1.min.js"></script>
+		<script src="lib/jquery-ui.min.js"></script>
+		<script src="lib/jquery.jsPlumb-1.7.2-min.js"></script> 
+		<script src="lib/jquery.layout-1.4.0.js"></script> 
+		
+		<!-- JS File -->
+		<script src="canvas.js"></script>	
+	</body>
+</html>

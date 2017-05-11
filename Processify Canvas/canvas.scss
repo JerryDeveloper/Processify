@@ -1,0 +1,111 @@
+$toolbar_control_width : 20px;
+$toolbar_control_height : 20px;
+$toolbar_control_margin_top : 3px;
+$toolbar_control_margin_left : 3px;
+
+$topbar_button_width : 120px;
+$topbar_button_space : 5px;
+$topbar_save_button_margin_right : $topbar_button_space * 4 + $topbar_button_width * 3;
+$topbar_sne_button_margin_right : $topbar_button_space * 3 + $topbar_button_width * 2;
+$topbar_exit_button_margin_right : $topbar_button_space * 2 + $topbar_button_width * 1;
+$topbar_more_button_margin_right : $topbar_button_space;
+
+body {
+	#tool-bar {
+		.tool-control {
+			width: $toolbar_control_width;
+			height: $toolbar_control_height;
+			margin-top: $toolbar_control_margin_top;
+			margin-left: $toolbar_control_margin_left;
+		}
+		
+		#tool-e-control {
+			border: 1px solid blue;
+		}
+		
+		#tool-a-control {
+			border: 1px solid red;
+		}
+	}
+	
+	#top-bar {
+		#top-logo {
+			display: inline;
+		}
+		
+		.cs-top-button {
+			width: $topbar_button_width;
+			height: 60px;
+			border: 1px black solid;
+			position: absolute;
+		}
+		
+		#top-button-save {
+			right: $topbar_save_button_margin_right;
+		}
+		#top-button-exit {
+			right: $topbar_exit_button_margin_right;
+		}
+		#top-button-sne {
+			right: $topbar_sne_button_margin_right;
+		}
+		#top-button-more {
+			right: $topbar_more_button_margin_right;
+		}
+	}
+	
+	#canvas {
+		position: absolute;
+		
+		#form-e {
+			border: 1px solid black;
+			background: white;
+			position: absolute;
+			top: 20px;
+			left: 20px; 
+			z-index: 999;
+		}
+
+		#form-a {
+			border: 1px solid black;
+			width: 400px;
+			background: white;
+			position: absolute;
+			top: 20px;
+			left: 20px; 
+			z-index: 999;
+		}
+		
+		.cs-canvas-step {
+			width: 150px;
+			max-height: 400px;
+			min-height: 100px;
+			height: auto;
+			overflow: hidden;
+			background: white; 
+			padding: 10px;
+			position: absolute;		/* Important: if relative the anchor and connector will depart from div */
+		}
+		
+		.cs-canvas-e-step {
+			border: 2px solid blue;
+		}
+
+		.cs-canvas-a-step {
+			border: 2px solid red;
+		}
+		
+		#canvas-a-option {
+			border: 1px solid black;
+			background: white;
+			width: 120px;
+			padding: 5px;
+			position: absolute;
+			z-index: 99;
+		}
+		
+		#form-a-description {
+			height: 100px;
+		}
+	}
+}

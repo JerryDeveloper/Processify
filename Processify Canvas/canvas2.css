@@ -1,0 +1,88 @@
+/* tool bar */
+
+#tool-bar div {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+#tool-bar #tool-e-control {
+    border: 1px solid blue; 
+}
+
+#tool-bar #tool-a-control {
+    border: 1px solid red;
+}
+
+/* top bar */
+
+.ui-layout-north #top-logo {
+	/*float: left;*/
+	display: inline;
+}
+
+.ui-layout-north .cs-top-button {
+	width: 200px;
+	height: 60px;
+	border: 1px black solid;
+	/*float: right;*/
+	
+}
+
+/* canvas */
+
+#canvas {
+	position: absolute;
+}
+
+#form-e {
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+	z-index: 999;
+}
+
+#form-a {
+    border: 1px solid black;
+    width: 400px;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+	z-index: 999;
+}
+
+#form-a-description {
+	height: 100px;
+}
+
+.cs-canvas-step {
+	width: 150px;
+	max-height: 400px;
+	min-height: 100px;
+	height: auto;
+	overflow: hidden;
+	background: white; 
+	padding: 10px;
+	position: absolute;		/* Important: if relative the anchor and connector will depart from div */
+}
+
+.cs-canvas-e-step {
+	border: 2px solid blue;
+}
+
+.cs-canvas-a-step {
+	border: 2px solid red;
+}
+
+#canvas-a-option {
+	border: 1px solid black;
+	background: white;
+	width: 120px;
+	padding: 5px;
+	position: absolute;
+	z-index: 99;
+}

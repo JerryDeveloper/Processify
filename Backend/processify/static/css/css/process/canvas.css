@@ -1,0 +1,42 @@
+#canvas {
+  width: 98%;
+  height: 600px;
+  overflow: scroll;
+  border: 1px solid black;
+  position: absolute; }
+
+#toolbar {
+  width: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 200px;
+  border: 1px solid black;
+  position: absolute; }
+  #toolbar div {
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: 3px;
+    padding: 5px; }
+  #toolbar #execution-step-control {
+    border: 1px solid blue; }
+  #toolbar #evaluation-step-control {
+    border: 1px solid red; }
+
+#detail-form {
+  border: 1px solid black;
+  width: 400px;
+  background: white;
+  position: absolute; }
+
+.evecution-step {
+  border: 1px solid blue;
+  width: 200px;
+  height: auto;
+  min-height: 40px;
+  max-height: 300px;
+  background: white;
+  overflow: hidden;
+  padding: 10px; }
+
+/*# sourceMappingURL=canvas.css.map */

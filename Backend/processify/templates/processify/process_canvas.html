@@ -1,0 +1,52 @@
+{% extends "processify/base.html" %}
+
+<!-- customized head -->
+{% block title %}Process Canvas{% endblock %}
+
+{% block cssimport %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/css/common.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/css/process/canvas.css' %}">
+{% endblock %}
+
+<!-- customized body -->
+{% block body %}
+
+
+
+<h1>Process Canvas</h1>
+
+<div id="canvas" class="center">
+	<div id="toolbar">
+		<div id="execution-step-control"></div>
+		<div id="evaluation-step-control"></div>
+	</div>
+	
+	<table id="detail-form">
+		<tr>
+			<th>{{ task_detail_form.name.label_tag }}</th>
+			<td>{{ task_detail_form.name }}</td>
+		</tr>
+		<tr>
+			<th>{{ task_detail_form.description.label_tag }}</th>
+			<td>{{ task_detail_form.description }}</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>
+				<button id="save-detail-button">OK</button>
+				<button id="delete-step-button">Delete This Step</button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+{% endblock %}
+
+<!-- customized js script import -->
+
+{% block jsimport %}
+<script src="{% static 'js/process/canvas.js' %}"></script>
+{% endblock %}

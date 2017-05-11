@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+		{% block title %}{% endblock %}
+		</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/css/base.css' %}">
+		{% block cssimport %}{% endblock %}
+	</head>
+
+	<body>
+	
+		<h1>Hi, {{ username }}</h1>
+		
+		<ul class="category main-category">
+			<li><a href="{% url 'task' %}">My Dashboard</a></li>
+			<li><a href="{% url 'parket' %}">Parket</a></li>
+		</ul>
+		<!-- should disappear if parket is selected -->
+		
+		<ul class="category sub-category">
+			<li><a href="{% url 'task' %}">Task list</a></li>
+			<li><a href="{% url 'process' %}">Manage processes</a></li>
+			<li><a href="{% url 'project' %}">Manage projects</a></li>
+		</ul>
+		
+		{% block body %}{% endblock %}
+		
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		
+		{% block jsimport %}{% endblock %}
+	
+	</body>
+</html>
